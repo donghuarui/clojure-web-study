@@ -7,6 +7,7 @@
                  [ring/ring-json "0.4.0"]
                  [ring/ring-defaults "0.3.2"]
                  [korma "0.4.3"]
+                 [org.clojure/java.jdbc "0.3.6"]
                  [mysql/mysql-connector-java "8.0.11"]]
   :plugins [[lein-ring "0.12.4"]]
   :ring {:handler clojure-web-study.core/app

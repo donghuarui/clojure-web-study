@@ -2,22 +2,22 @@
   (:use korma.db
         korma.core))
 
-(defdb korma-db (mysql {:db "learn_english",
-                        :host "",
+(defdb korma-db (mysql {:db "test",
+                        :host "dev.qjun.com.cn",
                         :port 3306,
-                        :user "",
-                        :password ""}))
-
-(defentity t_knowledge)
+                        :user "qjun_dev",
+                        :password "6^KwwVPbxz4RTaBebDG&YJ3!USLMiVyU"}))
+;(declare courses)
+(defentity user)
 
 (defn get-all-knowledge []
   (dry-run
-    (select t_knowledge))
-  (select t_knowledge))
+    (select user))
+  (select user))
 
 (defn get-by-id [id]
   (dry-run
-    (select t_knowledge
+    (select user
             (where {:id id})))
-  (select t_knowledge
+  (select user
           (where {:id id})))
